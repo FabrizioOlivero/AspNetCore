@@ -7,6 +7,12 @@ namespace MyCourse.Controllers
 {
     public class CoursesController : Controller
     {
+        private readonly ICourseService courseService;
+        public CoursesController(ICourseService courseService)
+        {
+            this.courseService = courseService;
+
+        }
         public IActionResult Index()
         {
             ViewData["Title"] = "Catalogo dei corsi";
